@@ -8,11 +8,12 @@ answer1.innerHTML = `The average price of all items is ${avgPrice}`
 var b14a18 = items.filter(function(value){
 	return(value.price > 14.00 && value.price < 18.00)
 })
-var b14a18titles = b14a18.map(function(value){
-	return(value.title)
-})
+var answer2Output =""
+for( i = 0 ; i < b14a18.length ; i++){
+	answer2Output += b14a18[i].title +"<br>"
+}
 var answer2 = document.querySelector("#answer2")
-answer2.innerHTML = `${b14a18titles}`
+answer2.innerHTML = `${answer2Output}`
 
 var GBP = items.filter(function(value){
 	return(value.currency_code === "GBP")
@@ -23,8 +24,22 @@ answer3.innerHTML = `${GBP[0].title} costs ${GBP[0].price}`
 var madeWood = items.filter(function(value){
 	return(value.materials.indexOf("wood") +1 >0)
 })
-var madeWoodTitles = madeWood.map(function(value){
-	return(value.title)
-})
+var answer4Output =""
+for( i = 0 ; i < madeWood.length ; i++){
+	answer4Output += madeWood[i].title +"<br>"
+}
 var answer4 = document.querySelector("#answer4")
-answer4.innerHTML = `${madeWoodTitles}`
+answer4.innerHTML = `${answer4Output}`
+
+var made8 = items.filter(function(value){
+	return(value.materials.length > 7)
+})
+var answer5Output =""
+for ( i = 0 ; i < made8.length ; i++){
+	answer5Output = made8[i].title +" has "+ made8[i].materials.length +" materials:<br>"
+	/*for ( x = 0 ; i <made8[i].materials.length ; i++){
+		+made8[i].materials[x]+"<br>"
+	}*/
+}
+var answer5 = document.querySelector("#answer5")
+answer5.innerHTML = `${answer5Output}`
