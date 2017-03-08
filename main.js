@@ -9,14 +9,22 @@ var b14a18 = items.filter(function(value){
 	return(value.price > 14.00 && value.price < 18.00)
 })
 var b14a18titles = b14a18.map(function(value){
-	return (value.title)
+	return(value.title)
 })
 var answer2 = document.querySelector("#answer2")
 answer2.innerHTML = `${b14a18titles}`
 
-var GBP = []
 var GBP = items.filter(function(value){
 	return(value.currency_code === "GBP")
 })
 var answer3 = document.querySelector("#answer3")
 answer3.innerHTML = `${GBP[0].title} costs ${GBP[0].price}`
+
+var madeWood = items.filter(function(value){
+	return(value.materials.indexOf("wood") +1 >0)
+})
+var madeWoodTitles = madeWood.map(function(value){
+	return(value.title)
+})
+var answer4 = document.querySelector("#answer4")
+answer4.innerHTML = `${madeWoodTitles}`
