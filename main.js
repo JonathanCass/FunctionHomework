@@ -36,10 +36,11 @@ var made8 = items.filter(function(value){
 })
 var answer5Output =""
 for ( i = 0 ; i < made8.length ; i++){
-	answer5Output = made8[i].title +" has "+ made8[i].materials.length +" materials:<br>"
-	/*for ( x = 0 ; i <made8[i].materials.length ; i++){
-		+made8[i].materials[x]+"<br>"
-	}*/
+	answer5Output += made8[i].title +" has "+ made8[i].materials.length +" materials:<br><br>"
+	for ( x = 0 ; x <made8[i].materials.length ; x++){
+		answer5Output += made8[i].materials[x]+"<br>"
+	}
+	answer5Output += "<br>"
 }
 var answer5 = document.querySelector("#answer5")
 answer5.innerHTML = `${answer5Output}`
