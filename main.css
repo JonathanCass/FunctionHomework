@@ -1,0 +1,41 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	background-color: #EEEEEE;
+	color: #555555;
+	text-align: center;
+	font-family: arial;
+}
+body h1{
+	text-align: left;
+	font-size: 46px;
+	background-color: white;
+	height: 135px;
+	margin:0;
+	line-height: 135px;
+	padding-left: 90px;
+}
+* {
+	width: 2042px;
+}
+h2{
+	margin-top: 84px;
+	font-size: 56px;
+}
+pre{
+	font-size: 24px;
+}
+.footer{
+	background-color: #4B494F;
+	color: #999999;
+	font-size: 20px;
+	height: 215px;
+	margin-top: 120px;
+}
+h3{
+	padding-top: 140px;
+}

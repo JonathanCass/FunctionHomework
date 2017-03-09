@@ -3,7 +3,7 @@ var sum = items.reduce(function(a,b){
 }, 0)
 var avgPrice = (sum/items.length).toFixed(2)
 var answer1 = document.querySelector("#answer1")
-answer1.innerHTML = `The average price of all items is ${avgPrice}`
+answer1.innerHTML = `The average price is ${avgPrice}`
 
 var b14a18 = items.filter(function(value){
 	return(value.price > 14.00 && value.price < 18.00)
@@ -44,3 +44,9 @@ for ( i = 0 ; i < made8.length ; i++){
 }
 var answer5 = document.querySelector("#answer5")
 answer5.innerHTML = `${answer5Output}`
+
+var madeSelf = items.filter(function(value){
+	return(value.who_made=="i_did")
+})
+var answer6 = document.querySelector("#answer6")
+answer6.innerHTML = `${madeSelf.length} were made by their sellers`
