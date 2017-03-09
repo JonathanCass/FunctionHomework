@@ -26,7 +26,7 @@ var madeWood = items.filter(function(value){
 })
 var answer4Output =""
 for( i = 0 ; i < madeWood.length ; i++){
-	answer4Output += madeWood[i].title +"<br>"
+	answer4Output += madeWood[i].title +" is made of wood."+"<br>"
 }
 var answer4 = document.querySelector("#answer4")
 answer4.innerHTML = `${answer4Output}`
