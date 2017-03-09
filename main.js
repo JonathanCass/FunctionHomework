@@ -9,9 +9,9 @@ var b14a18 = items.filter(function(value){
 	return(value.price > 14.00 && value.price < 18.00)
 })
 var answer2Output =""
-for( i = 0 ; i < b14a18.length ; i++){
-	answer2Output += b14a18[i].title +"<br>"
-}
+b14a18.forEach(function(item){
+	answer2Output += item.title +"<br>"
+})
 var answer2 = document.querySelector("#answer2")
 answer2.innerHTML = `${answer2Output}`
 
