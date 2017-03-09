@@ -25,9 +25,9 @@ var madeWood = items.filter(function(value){
 	return(value.materials.indexOf("wood") +1 >0)
 })
 var answer4Output =""
-for( i = 0 ; i < madeWood.length ; i++){
-	answer4Output += madeWood[i].title +" is made of wood."+"<br>"
-}
+madeWood.forEach(function(item){
+	answer4Output += item.title +" is made of wood."+"<br>"
+})
 var answer4 = document.querySelector("#answer4")
 answer4.innerHTML = `${answer4Output}`
 
@@ -35,13 +35,12 @@ var made8 = items.filter(function(value){
 	return(value.materials.length > 7)
 })
 var answer5Output =""
-for ( i = 0 ; i < made8.length ; i++){
-	answer5Output += made8[i].title +" has "+ made8[i].materials.length +" materials:<br><br>"
-	for ( x = 0 ; x <made8[i].materials.length ; x++){
-		answer5Output += made8[i].materials[x]+"<br>"
-	}
-	answer5Output += "<br>"
-}
+made8.forEach(function(item){
+	answer5Output += item.title +" has "+ item.materials.length +" materials:<br><br>"
+			item.materials.forEach(function(value){
+				answer5Output += value +"<br>"
+	})
+})
 var answer5 = document.querySelector("#answer5")
 answer5.innerHTML = `${answer5Output}`
 
