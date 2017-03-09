@@ -19,7 +19,7 @@ var GBP = items.filter(function(value){
 	return(value.currency_code === "GBP")
 })
 var answer3 = document.querySelector("#answer3")
-answer3.innerHTML = `${GBP[0].title} costs ${GBP[0].price}`
+answer3.innerHTML = `${GBP[0].title} costs £${GBP[0].price}`
 
 var madeWood = items.filter(function(value){
 	return(value.materials.indexOf("wood") +1 >0)
